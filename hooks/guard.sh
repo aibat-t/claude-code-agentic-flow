@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# java-flow guard: PreToolUse для Bash и Edit|Write|MultiEdit.
+# ccaf guard: PreToolUse для Bash и Edit|Write|MultiEdit.
 # Блокирует (exit 2): push в main/master, force push, изменение существующих миграций.
 
 set -f
 input="$(cat)"
 
 if ! command -v jq >/dev/null 2>&1; then
-  echo "java-flow guard: jq не установлен — проверки пропущены" >&2
+  echo "ccaf guard: jq не установлен — проверки пропущены" >&2
   exit 0
 fi
 
 block() {
-  echo "java-flow guard: $1" >&2
+  echo "ccaf guard: $1" >&2
   exit 2
 }
 

@@ -1,9 +1,16 @@
 {
-  "name": "java-flow",
+  "name": "ccaf",
   "version": "0.1.0",
-  "description": "Флоу разработки на Java/Spring: задача → анализ → план → апрув → код → unit-тесты → билд и тесты → commit + push.",
+  "description": "claude-code-agentic-flow (ccaf): флоу разработки на Java/Spring: задача → анализ → план → апрув → код → unit-тесты → билд и тесты → commit + push.",
   "author": {
     "name": "Tozhybayev Aibat"
   },
-  "keywords": ["java", "spring", "workflow", "planning", "testing"]
+  "keywords": [
+    "java",
+    "spring",
+    "workflow",
+    "planning",
+    "testing"
+  ],
+  "repository": "https://github.com/aibat-t/claude-code-agentic-flow"
 }

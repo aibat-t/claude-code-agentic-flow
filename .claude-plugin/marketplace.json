@@ -1,11 +1,11 @@
 {
-  "name": "java-flow",
+  "name": "claude-code-agentic-flow",
   "owner": {
     "name": "Tozhybayev Aibat"
   },
   "plugins": [
     {
-      "name": "java-flow",
+      "name": "ccaf",
       "source": "./",
       "description": "Флоу разработки на Java/Spring: анализ → план → апрув → код → тесты → билд → commit + push."
     }

@@ -9,7 +9,7 @@ model: sonnet
 
 ## Команда
 
-1. Возьми команды из раздела `## java-flow` в `CLAUDE.md` проекта.
+1. Возьми команды из раздела `## ccaf` в `CLAUDE.md` проекта.
 2. Если их нет — определи сам:
    - `mvnw`/`pom.xml` → `./mvnw -q -B verify` (модуль: `-pl <m> -am`; тест: `-Dtest=Class#method -Dsurefire.failIfNoSpecifiedTests=false`);
    - `gradlew`/`build.gradle*` → `./gradlew build` (модуль: `:<m>:build`; тест: `:<m>:test --tests 'Class.method'`);

@@ -1,4 +1,4 @@
-# java-flow
+# claude-code-agentic-flow (ccaf)
 
 Claude Code плагин для разработки на Java/Spring: от задачи до запушенной ветки по утверждённому плану.
 
@@ -10,14 +10,14 @@ Claude Code плагин для разработки на Java/Spring: от за
 
 Из GitHub:
 ```
-/plugin marketplace add <github-user>/java-flow
-/plugin install java-flow@java-flow
+/plugin marketplace add aibat-t/claude-code-agentic-flow
+/plugin install ccaf@claude-code-agentic-flow
 ```
 
 Локально (для разработки плагина):
 ```
-/plugin marketplace add ./java-flow
-/plugin install java-flow@java-flow
+/plugin marketplace add ./claude-code-agentic-flow
+/plugin install ccaf@claude-code-agentic-flow
 ```
 
 Требуется `jq` для hook-защиты (`winget install jqlang.jq` / `brew install jq` / `apt install jq`). Без него защита пропускается с предупреждением.
@@ -25,22 +25,22 @@ Claude Code плагин для разработки на Java/Spring: от за
 ## Первый запуск в проекте
 
 ```
-/java-flow:setup
+/ccaf:setup
 ```
-Добавляет в `CLAUDE.md` проекта раздел `## java-flow`: команды билда и тестов, модули, миграции, эталонные классы. Проверьте и поправьте его — от него зависит качество всего флоу.
+Добавляет в `CLAUDE.md` проекта раздел `## ccaf`: команды билда и тестов, модули, миграции, эталонные классы. Проверьте и поправьте его — от него зависит качество всего флоу.
 
 ## Команды
 
 | Команда | Что делает | Когда |
 |---|---|---|
-| `/java-flow:setup` | Создаёт/дополняет `CLAUDE.md` проекта | Один раз на проект, после крупных изменений структуры |
-| `/java-flow:task <задача>` | Весь флоу: план → апрув → код → тесты → проверка → commit + push | Обычная задача или баг целиком |
-| `/java-flow:plan <задача>` | Анализ + план в `docs/plans/<ID>.md`, стоп | Нужен только план или хотите контролировать каждый этап |
-| `/java-flow:implement [план]` | Код + тесты + проверка (до 3 попыток) | План утверждён |
-| `/java-flow:verify [модуль\|Test#method\|full]` | Билд и тесты, статус PASS/FAIL | Проверить текущее состояние |
-| `/java-flow:ship` | Ветка, коммит, push | Всё зелёное, пора отправлять |
+| `/ccaf:setup` | Создаёт/дополняет `CLAUDE.md` проекта | Один раз на проект, после крупных изменений структуры |
+| `/ccaf:task <задача>` | Весь флоу: план → апрув → код → тесты → проверка → commit + push | Обычная задача или баг целиком |
+| `/ccaf:plan <задача>` | Анализ + план в `docs/plans/<ID>.md`, стоп | Нужен только план или хотите контролировать каждый этап |
+| `/ccaf:implement [план]` | Код + тесты + проверка (до 3 попыток) | План утверждён |
+| `/ccaf:verify [модуль\|Test#method\|full]` | Билд и тесты, статус PASS/FAIL | Проверить текущее состояние |
+| `/ccaf:ship` | Ветка, коммит, push | Всё зелёное, пора отправлять |
 
-Правки плана: просто напишите комментарии после `/java-flow:plan` — план обновится в том же файле. Апрув — «ок»/«апрув».
+Правки плана: просто напишите комментарии после `/ccaf:plan` — план обновится в том же файле. Апрув — «ок»/«апрув».
 
 ## Агенты и skills
 
@@ -65,7 +65,7 @@ Claude Code плагин для разработки на Java/Spring: от за
 После правок:
 1. Поднять `version` в `.claude-plugin/plugin.json`.
 2. Закоммитить и запушить.
-3. В проекте: `/plugin marketplace update java-flow`, затем перезапустить сессию.
+3. В проекте: `/plugin marketplace update claude-code-agentic-flow`, затем перезапустить сессию.
 
 ## Плагин для всей команды
 
@@ -73,12 +73,12 @@ Claude Code плагин для разработки на Java/Spring: от за
 ```json
 {
   "extraKnownMarketplaces": {
-    "java-flow": {
-      "source": { "source": "github", "repo": "<github-user>/java-flow" }
+    "claude-code-agentic-flow": {
+      "source": { "source": "github", "repo": "aibat-t/claude-code-agentic-flow" }
     }
   },
   "enabledPlugins": {
-    "java-flow@java-flow": true
+    "ccaf@claude-code-agentic-flow": true
   }
 }
 ```
