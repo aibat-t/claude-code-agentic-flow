@@ -1,6 +1,6 @@
 {
   "name": "ccaf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "claude-code-agentic-flow (ccaf): флоу разработки на Java/Spring: задача → анализ → план → апрув → код → unit-тесты → билд и тесты → commit + push.",
   "author": {
     "name": "Tozhybayev Aibat"
