@@ -1,6 +1,6 @@
 ---
 description: Полный флоу задачи или бага — план, апрув, реализация, тесты, проверка, commit + push.
-argument-hint: <ключ задачи или описание>
+argument-hint: <ключ задачи или описание> [--artifact | --no-artifact]
 ---
 
 Задача: $ARGUMENTS
